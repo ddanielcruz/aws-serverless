@@ -1,0 +1,22 @@
+{
+  "name": "004-image-analysis",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "invoke": "sls invoke -f image-analysis",
+    "invoke:local": "sls invoke local -f image-analysis",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "aws-sdk": "2.1128",
+    "axios": "^0.17.1"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3",
+    "serverless": "^3.16.0"
+  }
+}
