@@ -1,0 +1,17 @@
+{
+  "name": "tooling-jest-docker-plus",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "offline": "npx sls offline start --host 0.0.0.0",
+    "start": "npx nodemon --exec npm run offline"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1248.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "serverless": "^3.22.0",
+    "serverless-offline": "9.2"
+  }
+}
