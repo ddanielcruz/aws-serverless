@@ -1,0 +1,18 @@
+{
+  "name": "007-lambda-environment",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "invoke:local": "npx sls invoke local -f commit-message-scheduler"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1248.0",
+    "axios": "^1.1.3",
+    "cheerio": "^1.0.0-rc.12",
+    "env-var": "^7.3.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "serverless": "^3.22.0"
+  }
+}
