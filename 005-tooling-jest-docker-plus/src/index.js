@@ -1,6 +1,6 @@
 const { S3 } = require('./factory')
 
-module.exports.hello = async () => {
+module.exports.main = async () => {
   const allBuckets = await S3.listBuckets().promise()
   console.log('[hello] Found buckets:', allBuckets)
 

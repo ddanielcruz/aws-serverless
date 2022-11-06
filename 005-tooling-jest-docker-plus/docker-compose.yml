@@ -2,11 +2,28 @@ version: '3.8'
 
 services:
   localstack:
-    container_name: 'localstack'
+    container_name: localstack
     image: localstack/localstack:1.0.4
     ports:
-      - '4566:4566'
+      - 4566:4566
     environment:
       - DOCKER_HOST=unix:///var/run/docker.sock
     volumes:
-      - '/var/run/docker.sock:/var/run/docker.sock'
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  app:
+    container_name: app
+    build: .
+    volumes:
+      - .:/src
+      - nodemodules:/src/nodemodules
+    restart: on-failure
+    ports:
+      - 3000:3000
+    depends_on:
+      - localstack
+    environment:
+      - LOCALSTACK_HOST=localstack
+
+volumes:
+  nodemodules: {}
